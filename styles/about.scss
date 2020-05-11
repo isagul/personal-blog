@@ -1,0 +1,47 @@
+.about-me {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px);
+    .my-name {
+        padding-left: 10px;
+        padding-right: 10px;
+        background: yellow;
+        color: black;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+    div {
+        background: #262626b3;
+        height: auto;
+        width: 50vw;
+        padding: 2rem;
+        font-family: "Nunito", sans-serif;
+        @media only screen and (max-width: 425px) {
+            width: 100vw;
+            margin: 0 20px;
+        }
+        h4 {
+            // background: -webkit-linear-gradient(#CF5050, #E64349);
+            -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            margin-bottom: 4%;
+            text-align: center;
+            color: #cf5050;
+            .curly-braces {
+                font-weight: bold;
+                color: white;
+            }
+        }
+        p {
+            color: white;
+            text-align: left;
+        }
+        iframe {
+            margin-left: auto;
+            display: block;
+            margin-right: auto;
+        }
+    }
+}

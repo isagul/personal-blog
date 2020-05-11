@@ -1,11 +1,14 @@
+import ReactPlayer from 'react-player'
+
 const Profile = () => {
+
   return (
-    <div>
+    <div className="profile-component">
       <div className="profile">
         <img src="static/profile_image.jpg" alt="isa_gul_profile_image" />
         <div className="profile-info">
           <p>İsa Gül</p>
-          <p>Front-End Developer</p>
+          <p>Frontend Developer</p>
           <p>"I'm gonna start a revolution from my bed"</p>
         </div>
       </div>
@@ -47,6 +50,13 @@ const Profile = () => {
         </a>
       </div>
       <style jsx>{`
+          .profile-component {
+            height: calc(100vh - 130px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
           .profile {
             display: flex;
             flex-direction: row;
@@ -68,6 +78,9 @@ const Profile = () => {
             border-left-style: solid;
             padding-left: 10px;
           }
+          .profile-info p:last-child {
+              cursor: pointer;
+          }
           @media only screen and (max-width: 425px) {
             .profile .profile-info {
               border-left: none;
@@ -79,12 +92,10 @@ const Profile = () => {
           .profile .profile-info p {
             letter-spacing: 2px;
             line-height: 15px;
-            font-family: "Roboto", sans-serif;
           }
           .profile .profile-info p:last-child {
             float: right;
             font-size: 10px;
-            font-family: "Raleway", sans-serif;
           }
           @media screen and (max-width: 420px) {
             .profile {

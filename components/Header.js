@@ -28,7 +28,7 @@ const Header = (props) => {
           <li
             className={`header-item ${
               router.pathname === HOME ? "active" : ""
-            }`}
+              }`}
             onClick={() => router.push(HOME)}
           >
             isagul
@@ -38,7 +38,7 @@ const Header = (props) => {
           <li
             className={`header-item ${
               router.pathname === ABOUT ? "active" : ""
-            }`}
+              }`}
             onClick={() => router.push(ABOUT)}
           >
             about
@@ -46,7 +46,7 @@ const Header = (props) => {
           <li
             className={`header-item ${
               router.pathname === BLOG ? "active" : ""
-            }`}
+              }`}
             onClick={() => router.push(BLOG)}
           >
             blog
@@ -54,7 +54,7 @@ const Header = (props) => {
           <li
             className={`header-item ${
               router.pathname === PROJECT ? "active" : ""
-            }`}
+              }`}
             onClick={() => router.push(PROJECT)}
           >
             projects
@@ -70,21 +70,20 @@ const Header = (props) => {
               title="Sun"
             />
           ) : (
-            <img
-              src="/static/night.svg"
-              width="40"
-              height="40"
-              alt="Moon free icon"
-              title="Moon"
-            />
-          )}
+              <img
+                src="/static/night.svg"
+                width="40"
+                height="40"
+                alt="Moon free icon"
+                title="Moon"
+              />
+            )}
         </div>
       </div>
       <style jsx>
         {`
           .header-component {
             text-align: center;
-            font-family: "Roboto", sans-serif;
             width: 100%;
             padding: 40px 40px;
             align-self: center;
