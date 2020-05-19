@@ -119,6 +119,7 @@ const Profile = () => {
           .profile {
             margin-left: 0;
             flex-direction: column;
+            align-items: center;
           }
           .profile img {
             margin-right: 0;
@@ -127,6 +128,7 @@ const Profile = () => {
           }
           .profile .profile-info {
             padding-left: 0;
+            text-align:center;
           }
         }
         .icons {
