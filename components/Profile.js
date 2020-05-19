@@ -29,6 +29,7 @@ const Profile = () => {
           href="https://github.com/isagul"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="github"
         >
           <i className="fab fa-github-square"></i>
         </a>
@@ -36,6 +37,7 @@ const Profile = () => {
           href="https://www.linkedin.com/in/isa-gul/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="linkedin"
         >
           <i className="fab fa-linkedin"></i>
         </a>
@@ -43,6 +45,7 @@ const Profile = () => {
           href="https://medium.com/@isagul"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="medium"
         >
           <i className="fab fa-medium"></i>
         </a>
@@ -50,6 +53,7 @@ const Profile = () => {
           href="https://twitter.com/isamigul"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="twitter"
         >
           <i className="fab fa-twitter-square"></i>
         </a>
@@ -57,6 +61,7 @@ const Profile = () => {
           href="https://www.npmjs.com/settings/isagul/profile"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="npmjs"
         >
           <i className="fab fa-npm"></i>
         </a>

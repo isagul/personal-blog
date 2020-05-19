@@ -25,40 +25,40 @@ const Header = (props) => {
     <div id="header" className="header-component">
       <div className="header-list">
         <div className="header-left-side">
-          <li
+          <div
             className={`header-item ${
               router.pathname === HOME ? "active" : ""
               }`}
             onClick={() => router.push(HOME)}
           >
             isagul
-          </li>
+          </div>
         </div>
         <div className="header-right-side">
-          <li
+          <div
             className={`header-item ${
               router.pathname === ABOUT ? "active" : ""
               }`}
             onClick={() => router.push(ABOUT)}
           >
             about
-          </li>
-          <li
+          </div>
+          <div
             className={`header-item ${
               router.pathname === BLOG ? "active" : ""
               }`}
             onClick={() => router.push(BLOG)}
           >
             blog
-          </li>
-          <li
+          </div>
+          <div
             className={`header-item ${
               router.pathname === PROJECT ? "active" : ""
               }`}
             onClick={() => router.push(PROJECT)}
           >
             projects
-          </li>
+          </div>
         </div>
         <div className="theme-icon" onClick={toggleTheme}>
           {theme === "light" ? (
