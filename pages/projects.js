@@ -52,7 +52,7 @@ const Projects = () => {
           padding: 0 40px;
         }
         .projects .project {
-          border-bottom: 1px solid #e2e8f0;
+          border-bottom: 1px solid #c8d2e0;
           padding: 1.45rem 0;
         }
         .projects .project .project-title {

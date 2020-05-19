@@ -6,9 +6,6 @@ export default function Home() {
   return (
     <Layout>
       <Profile />
-      <style jsx>{`
-        
-      `}</style>
     </Layout>
   )
 }

@@ -1,6 +1,13 @@
-import ReactPlayer from 'react-player'
+import React, { useState } from "react";
+import ReactPlayer from "react-player";
 
 const Profile = () => {
+  const [isAudioPlay, setIsAudioPlay] = useState(false);
+  const url = "https://www.youtube.com/watch?v=r8OipmKFDeM"
+
+  function playSound(){
+    isAudioPlay ? setIsAudioPlay(false) : setIsAudioPlay(true)
+  }
 
   return (
     <div className="profile-component">
@@ -9,8 +16,13 @@ const Profile = () => {
         <div className="profile-info">
           <p>İsa Gül</p>
           <p>Frontend Developer</p>
-          <p>"I'm gonna start a revolution from my bed"</p>
+          <p title="Click and Listen" onClick={() => playSound()}>"I'm gonna start a revolution from my bed"</p>
         </div>
+        <ReactPlayer
+          url={url}
+          style={{ display: "none" }}
+          playing={isAudioPlay}
+        />
       </div>
       <div className="icons">
         <a
@@ -50,91 +62,92 @@ const Profile = () => {
         </a>
       </div>
       <style jsx>{`
-          .profile-component {
-            height: calc(100vh - 130px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
-          .profile {
-            display: flex;
-            flex-direction: row;
+        .profile-component {
+          height: calc(100vh - 130px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .profile {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 1rem;
+          justify-content: center;
+        }
+        .profile img {
+          border-radius: 50%;
+          height: 120px;
+          width: 120px;
+          margin-right: 10px;
+          object-fit: cover;
+        }
+        .profile .profile-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-left-color: #cf5050;
+          border-left-width: 1px;
+          border-left-style: solid;
+          padding-left: 10px;
+        }
+        .profile-info p:last-child {
+          cursor: pointer;
+        }
+        @media only screen and (max-width: 425px) {
+          .profile .profile-info {
+            border-left: none;
+            border-bottom: 1px solid;
+            border-bottom-color: rgba(207, 80, 80, 0.5);
             margin-bottom: 1rem;
-            justify-content: center;
+          }
+        }
+        .profile .profile-info p {
+          letter-spacing: 2px;
+          line-height: 15px;
+        }
+        .profile .profile-info p:last-child {
+          float: right;
+          font-size: 10px;
+        }
+        @media screen and (max-width: 420px) {
+          .profile {
+            margin-left: 0;
+            flex-direction: column;
           }
           .profile img {
-            border-radius: 50%;
-            height: 120px;
-            width: 120px;
-            margin-right: 10px;
+            margin-right: 0;
+            height: 80px;
+            width: 80px;
           }
           .profile .profile-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-left-color: #cf5050;
-            border-left-width: 1px;
-            border-left-style: solid;
-            padding-left: 10px;
+            padding-left: 0;
           }
-          .profile-info p:last-child {
-              cursor: pointer;
-          }
-          @media only screen and (max-width: 425px) {
-            .profile .profile-info {
-              border-left: none;
-              border-bottom: 1px solid;
-              border-bottom-color: rgba(207, 80, 80, 0.5);
-              margin-bottom: 1rem;
-            }
-          }
-          .profile .profile-info p {
-            letter-spacing: 2px;
-            line-height: 15px;
-          }
-          .profile .profile-info p:last-child {
-            float: right;
-            font-size: 10px;
-          }
-          @media screen and (max-width: 420px) {
-            .profile {
-              margin-left: 0;
-              flex-direction: column;
-            }
-            .profile img {
-              margin-right: 0;
-              height: 80px;
-              width: 80px;
-            }
-            .profile .profile-info {
-              padding-left: 0;
-            }
-          }
-          .icons {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-          }
-          .icons a {
-            background: rgba(38, 38, 38, 0.7);
-            padding: 10px;
-            border-radius: 5px;
-            margin-right: 10px;
-          }
-          .icons a:last-child {
-            margin-right: 0;
-          }
-          .icons i {
-            color: white;
-            border-radius: 5px;
-            font-size: 40px;
-            transition: all 0.1s ease-out;
-          }
-          .icons i:hover {
-            cursor: pointer;
-          }
-        `}</style>
+        }
+        .icons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+        .icons a {
+          background: rgba(38, 38, 38, 0.7);
+          padding: 10px;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+        .icons a:last-child {
+          margin-right: 0;
+        }
+        .icons i {
+          color: white;
+          border-radius: 5px;
+          font-size: 40px;
+          transition: all 0.1s ease-out;
+        }
+        .icons i:hover {
+          cursor: pointer;
+        }
+      `}</style>
     </div>
   );
 };

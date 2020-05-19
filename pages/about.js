@@ -15,10 +15,10 @@ const About = () => {
             <span className="my-name">Isa</span>
             <span className="curly-braces">{" }"}</span>
           </h4>
-          <p>I live in Istanbul. I am a Front End developer building websites and web applications.
-          I interested in JavaScript and have professional experience working with React and Angular.
+          <p>I live in Istanbul. I am a frontend developer building websites and web applications.
+          I interested in JavaScript and have professional experience working with web technologies.
                 </p>
-          <p>Also, I have used these technologies: Redux, RxJS, Sass/Less, Gulp, Webpack, ES6, NodeJS, MongoDB</p>
+          <p>Also, I have used these technologies: React, Angular, Context API, Redux, Sass/Less, Gulp, Webpack, ES6, NodeJS, MongoDB</p>
         </div>
       </div>
       <style jsx>{`
@@ -43,7 +43,7 @@ const About = () => {
           height: auto;
           width: 50vw;
           padding: 2rem;
-          font-family: 'Nunito', sans-serif;
+          border-radius: 3px;
         }
         @media only screen and (max-width: 425px) {
           .about-me div {
@@ -53,7 +53,6 @@ const About = () => {
         }
         .about-me div h4 {
           -webkit-background-clip: text;
-          margin-bottom: 4%;
           text-align: center;
           color: #CF5050;
         }
@@ -63,7 +62,7 @@ const About = () => {
         }
         .about-me div p {
           color: white;
-          text-align: left;
+          text-align: justify;
         }
         .about-me div iframe {
           margin-left: auto;
