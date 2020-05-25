@@ -37,7 +37,6 @@ const Layout = (props) => {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <html lang="en">
         <div className="layout">
           <Head>
             <title>isagul - frontend developer</title>
@@ -84,7 +83,6 @@ const Layout = (props) => {
             }
           `}</style>
         </div>
-      </html>
     </ThemeProvider>
   );
 };

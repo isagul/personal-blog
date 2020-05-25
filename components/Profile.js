@@ -50,7 +50,7 @@ const Profile = () => {
           <i className="fab fa-medium"></i>
         </a>
         <a
-          href="https://twitter.com/isamigul"
+          href="https://twitter.com/isagul_"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="twitter"
