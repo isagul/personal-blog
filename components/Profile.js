@@ -1,28 +1,16 @@
-import React, { useState } from "react";
-import ReactPlayer from "react-player";
+import React from "react";
 
 const Profile = () => {
-  const [isAudioPlay, setIsAudioPlay] = useState(false);
-  const url = "https://www.youtube.com/watch?v=r8OipmKFDeM"
-
-  function playSound(){
-    isAudioPlay ? setIsAudioPlay(false) : setIsAudioPlay(true)
-  }
-
   return (
     <div className="profile-component">
       <div className="profile">
-        <img src="static/profile_image.jpg" alt="isa_gul_profile_image" />
+        <img src="static/profile_image.jpg" alt="isa_gul_profile_image" width={120} height={120} />
         <div className="profile-info">
           <p>İsa Gül</p>
           <p>Frontend Developer</p>
-          <p title="Click and Listen" onClick={() => playSound()}>"I'm gonna start a revolution from my bed"</p>
+          <p>"I'm gonna start a revolution from my bed"</p>
         </div>
-        <ReactPlayer
-          url={url}
-          style={{ display: "none" }}
-          playing={isAudioPlay}
-        />
+        
       </div>
       <div className="icons">
         <a
@@ -87,6 +75,7 @@ const Profile = () => {
           flex-direction: row;
           margin-bottom: 1rem;
           justify-content: center;
+          align-items: center;
         }
         .profile img {
           border-radius: 50%;

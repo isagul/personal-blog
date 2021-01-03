@@ -1,30 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { ABOUT, BLOG, HOME, PROJECT } from "../utils/constants/routes";
 
-
-const Header = (props) => {
-  const [theme, setTheme] = useState("light");
+const Header = ({ toggleTheme, currentTheme }) => {
   const router = useRouter();
-
-  useEffect(() => {
-    let currentTheme = localStorage.getItem("theme");
-    if (currentTheme === null) {
-      const currentDate = new Date();
-      if (currentDate.getHours() > 17) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
-    } else {
-      setTheme(currentTheme);
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    props.toggleTheme();
-    setTheme(localStorage.getItem("theme"));
-  };
 
   return (
     <div id="header" className="header-component">
@@ -33,7 +12,7 @@ const Header = (props) => {
           <div
             className={`header-item ${
               router.pathname === HOME ? "active" : ""
-              }`}
+            }`}
             onClick={() => router.push(HOME)}
           >
             isagul
@@ -43,7 +22,7 @@ const Header = (props) => {
           <div
             className={`header-item ${
               router.pathname === ABOUT ? "active" : ""
-              }`}
+            }`}
             onClick={() => router.push(ABOUT)}
           >
             about
@@ -51,7 +30,7 @@ const Header = (props) => {
           <div
             className={`header-item ${
               router.pathname === BLOG ? "active" : ""
-              }`}
+            }`}
             onClick={() => router.push(BLOG)}
           >
             blog
@@ -59,14 +38,14 @@ const Header = (props) => {
           <div
             className={`header-item ${
               router.pathname === PROJECT ? "active" : ""
-              }`}
+            }`}
             onClick={() => router.push(PROJECT)}
           >
             projects
           </div>
         </div>
-        <div className="theme-icon" onClick={toggleTheme}>
-          {theme === "light" ? (
+        <div className="theme-icon" onClick={() => toggleTheme()}>
+          {currentTheme === "light" ? (
             <img
               src="/static/sun.svg"
               width="40"
@@ -75,14 +54,14 @@ const Header = (props) => {
               title="Sun"
             />
           ) : (
-              <img
-                src="/static/night.svg"
-                width="40"
-                height="40"
-                alt="Moon free icon"
-                title="Moon"
-              />
-            )}
+            <img
+              src="/static/night.svg"
+              width="40"
+              height="40"
+              alt="Moon free icon"
+              title="Moon"
+            />
+          )}
         </div>
       </div>
       <style jsx>
@@ -92,7 +71,7 @@ const Header = (props) => {
             width: 100%;
             padding: 40px 20px;
             align-self: center;
-            position:sticky;
+            position: sticky;
             top: 0;
             z-index: 1;
           }
