@@ -52,8 +52,8 @@ const Blog = (props) => {
       <style jsx global>
         {`
           .blog-component {
-            max-width: 800px;
-            padding: 0 40px;
+            width: 100%;
+            max-width: 680px;
             align-self: center;
           }
           .blog-component p {
