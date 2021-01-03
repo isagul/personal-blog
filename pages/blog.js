@@ -11,9 +11,12 @@ const Blog = (props) => {
   );
 
   const override = css`
-        display: block;
-        margin: 0 auto;
-    `;
+    height: 100%;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
 
   return (
     <Layout>
@@ -27,7 +30,6 @@ const Blog = (props) => {
         loading={loading}
         css={override}
       />
-
       <div className="blog-component">
         {data !== null &&
           data.items.map((story, index) => {
@@ -50,16 +52,12 @@ const Blog = (props) => {
       <style jsx global>
         {`
           .blog-component {
-            width: 600px;
-            align-self:center;
+            max-width: 800px;
+            padding: 0 40px;
+            align-self: center;
           }
           .blog-component p {
             margin: 0;
-          }
-          @media only screen and (max-width: 414px) {
-            .blog-component {
-              width: 370px;
-            }
           }
         `}
       </style>

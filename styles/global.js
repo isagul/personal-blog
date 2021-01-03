@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     margin: 0;
     padding: 0;
-    transition: all 0.25s linear;
+    transition: all 0.2s linear;
   }
   
   .profile-info p{
@@ -38,6 +38,9 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.aboutBackgroundColor};
   }
   .blog-component {
+    .story-area {
+      border: ${({ theme }) => `1px solid ${theme.blogPostBorderColor}`}
+    }
     .desc-area {
       .title {
         color: ${({ theme }) => theme.blogTitleColor}
@@ -51,6 +54,17 @@ export const GlobalStyles = createGlobalStyle`
         }
       }
     }
+  }
+
+  .profile-component {
+    .icons i {
+      color: ${({ theme }) => theme.profileIconFgColor}
+    }
+  }
+
+  .header-component {
+    background-color:  ${({ theme }) => theme.headerBgColor};
+    box-shadow: ${({ theme }) => `1px 0 5px 2px ${theme.headerShadowColor}`};
   }
   
   `;

@@ -10,7 +10,12 @@ const Header = (props) => {
   useEffect(() => {
     let currentTheme = localStorage.getItem("theme");
     if (currentTheme === null) {
-      localStorage.setItem("theme", "light");
+      const currentDate = new Date();
+      if (currentDate.getHours() > 17) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
     } else {
       setTheme(currentTheme);
     }
@@ -85,8 +90,11 @@ const Header = (props) => {
           .header-component {
             text-align: center;
             width: 100%;
-            padding: 40px 40px;
+            padding: 40px 20px;
             align-self: center;
+            position:sticky;
+            top: 0;
+            z-index: 1;
           }
           @media only screen and (max-width: 425px) {
             .header-component {

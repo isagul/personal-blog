@@ -65,6 +65,14 @@ const Profile = () => {
         >
           <i className="fab fa-npm"></i>
         </a>
+        <a
+          href="https://www.instagram.com/isamigul"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="instagram"
+        >
+          <i className="fab fa-instagram"></i>
+        </a>
       </div>
       <style jsx>{`
         .profile-component {
@@ -99,14 +107,6 @@ const Profile = () => {
         .profile-info p:last-child {
           cursor: pointer;
         }
-        @media only screen and (max-width: 425px) {
-          .profile .profile-info {
-            border-left: none;
-            border-bottom: 1px solid;
-            border-bottom-color: rgba(207, 80, 80, 0.5);
-            margin-bottom: 1rem;
-          }
-        }
         .profile .profile-info p {
           letter-spacing: 2px;
           line-height: 15px;
@@ -115,7 +115,35 @@ const Profile = () => {
           float: right;
           font-size: 10px;
         }
+        .icons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+        .icons a {
+          // background: rgba(38, 38, 38, 0.7);
+          padding: 10px;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+        .icons a:last-child {
+          margin-right: 0;
+        }
+        .icons i {
+          border-radius: 5px;
+          font-size: 40px;
+          transition: all 0.1s ease-out;
+        }
+        .icons i:hover {
+          cursor: pointer;
+        }
         @media screen and (max-width: 420px) {
+          .profile .profile-info {
+            border-left: none;
+            border-bottom: 1px solid;
+            border-bottom-color: rgba(207, 80, 80, 0.5);
+            margin-bottom: 1rem;
+          }
           .profile {
             margin-left: 0;
             flex-direction: column;
@@ -130,29 +158,9 @@ const Profile = () => {
             padding-left: 0;
             text-align:center;
           }
-        }
-        .icons {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-        }
-        .icons a {
-          background: rgba(38, 38, 38, 0.7);
-          padding: 10px;
-          border-radius: 5px;
-          margin-right: 10px;
-        }
-        .icons a:last-child {
-          margin-right: 0;
-        }
-        .icons i {
-          color: white;
-          border-radius: 5px;
-          font-size: 40px;
-          transition: all 0.1s ease-out;
-        }
-        .icons i:hover {
-          cursor: pointer;
+          .icons i {
+            font-size: 24px;
+          }
         }
       `}</style>
     </div>

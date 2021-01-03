@@ -15,9 +15,9 @@ const BlogContent = ({ title, thumbnail, link, content, categories }) => {
         />
       )}
       <div className="desc-area">
-        <p className="title">{title}</p>
+        <h3 className="title">{title}</h3>
         <p className="content">
-          {createdDiv.getElementsByTagName("p")[0].innerText}...
+          {createdDiv.getElementsByTagName("p")[0].innerText}..
         </p>
         <a
           className="show-more"
@@ -25,30 +25,30 @@ const BlogContent = ({ title, thumbnail, link, content, categories }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p>More</p>
+          <p>More...</p>
         </a>
       </div>
       <style jsx>
         {`
           .story-area {
-            border-bottom: 1px solid lightgray;s
+            // border: 1px solid lightgray;
             border-radius: 3px;
             display: flex;
             flex-direction: column;
             margin: 1rem;
             padding: 1rem;
+            // box-shadow: 0 0 5px 2px lightgrey;
           }
           .story-area .thumbnail {
             height: 200px;
             flex-shrink: 0;
-            margin-bottom: 1rem;
             border-radius:3px;
           }
           .story-area .desc-area {
             flex-grow: 1;
           }
           .story-area .desc-area .title {
-            font-weight: 600;
+            font-weight: bold;
             margin-bottom: 1rem;
             text-align: center;
           }

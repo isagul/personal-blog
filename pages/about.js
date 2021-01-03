@@ -39,7 +39,6 @@ const About = () => {
           border-radius: 3px;
         }
         .about-me div {
-          background: #262626b3;
           height: auto;
           width: 50vw;
           padding: 2rem;

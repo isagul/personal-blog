@@ -7,18 +7,18 @@ export const myProjects = [
         npm_link: null
     },
     {
-        name: 'react-scroll-component',
-        github_url: 'https://github.com/isagul/react-scroll-button',
-        live_url: 'https://isagul.github.io/react-scroll-button/',
-        detail: 'Show a scroll button when you scrolled the page.',
-        npm_link: 'https://www.npmjs.com/package/react-scroll-button'
-    },
-    {
         name: 'periodic-table',
         github_url: 'https://github.com/isagul/periodic-table',
         live_url: 'https://app-periodic-table.netlify.com/',
         detail: 'Periodic table with ReactJS.',
         npm_link: null
+    },
+    {
+        name: 'react-scroll-component',
+        github_url: 'https://github.com/isagul/react-scroll-button',
+        live_url: 'https://isagul.github.io/react-scroll-button/',
+        detail: 'Show a scroll button when you scrolled the page.',
+        npm_link: 'https://www.npmjs.com/package/react-scroll-button'
     },
     {
         name: 'js-questions',
