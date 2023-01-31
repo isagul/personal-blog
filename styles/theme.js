@@ -30,8 +30,8 @@ export const darkTheme = {
     blogTitleColor: '#718096',
     blogContentColor: '#718096',
     blogShowMoreColor: '#718096',
-    blogPostBorderColor: '#3d3d50',
+    blogPostBorderColor: '#282835',
     headerBgColor: '#15202B',
-    headerShadowColor: '#3d3d50',
+    headerShadowColor: '#282835',
     profileIconFgColor: '#fff'
 }

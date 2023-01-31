@@ -1,7 +1,7 @@
 import React from "react";
 
 const BlogContent = ({ title, thumbnail, link, content, categories }) => {
-  let createdDiv = document.createElement("div");
+  const createdDiv = document.createElement("div");
   createdDiv.innerHTML = content;
 
   return (
@@ -35,17 +35,17 @@ const BlogContent = ({ title, thumbnail, link, content, categories }) => {
             border-radius: 3px;
             display: flex;
             flex-direction: column;
-            margin: 1rem;
-            padding: 1rem;
+            margin-bottom: 1rem;
             // box-shadow: 0 0 5px 2px lightgrey;
           }
           .story-area .thumbnail {
-            height: 200px;
+            height: 220px;
             flex-shrink: 0;
             border-radius:3px;
           }
           .story-area .desc-area {
             flex-grow: 1;
+            padding: 0 0 1rem 0;
           }
           .story-area .desc-area .title {
             font-weight: bold;

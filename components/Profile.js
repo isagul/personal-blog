@@ -53,14 +53,6 @@ const Profile = () => {
         >
           <i className="fab fa-npm"></i>
         </a>
-        <a
-          href="https://www.instagram.com/isamigul"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="instagram"
-        >
-          <i className="fab fa-instagram"></i>
-        </a>
       </div>
       <style jsx>{`
         .profile-component {
@@ -92,9 +84,6 @@ const Profile = () => {
           border-left-width: 1px;
           border-left-style: solid;
           padding-left: 10px;
-        }
-        .profile-info p:last-child {
-          cursor: pointer;
         }
         .profile .profile-info p {
           letter-spacing: 2px;

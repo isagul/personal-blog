@@ -27,6 +27,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   .project-name {
     color: ${({ theme }) => theme.projectNameColor};
+    text-underline-offset: 4px;
   }
   .project-detail {
     color: ${({ theme }) => theme.projectInfoColor};
@@ -39,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   .blog-component {
     .story-area {
-      border: ${({ theme }) => `1px solid ${theme.blogPostBorderColor}`}
+      border-bottom: ${({ theme }) => `1px solid ${theme.blogPostBorderColor}`}
     }
     .desc-area {
       .title {
@@ -64,7 +65,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .header-component {
     background-color:  ${({ theme }) => theme.headerBgColor};
-    box-shadow: ${({ theme }) => `1px 0 5px 2px ${theme.headerShadowColor}`};
+    box-shadow: ${({ theme }) => `1px 0 1px 1px ${theme.headerShadowColor}`};
   }
   
   `;

@@ -1,4 +1,6 @@
 import Head from "next/head";
+// import Link from "next/link";
+
 import Layout from "../components/Layout";
 import { myProjects } from "../constants/projects";
 
@@ -19,18 +21,10 @@ const Projects = () => {
           return (
             <div className="project" key={index}>
               <div className="project-title">
-                <p className="project-name">{project.name}</p>
+                <a className="project-name" href={project.live_url} target="_blank">
+                  {project.name}
+                </a>
                 <div className="project-icons">
-                  {project.live_url.length > 0 && (
-                    <a
-                      href={`${project.live_url}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
-                      <i className="fas fa-globe-europe live-link-text"></i>
-                    </a>
-                  )}
                   {project.github_url !== null && (
                     <a
                       href={`${project.github_url}`}
