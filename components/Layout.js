@@ -6,11 +6,11 @@ import { GlobalStyles } from "../styles/global";
 import { lightTheme, darkTheme } from "../styles/theme";
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(null);
   const _isMounted = useRef(false);
 
   useEffect(() => {
-    let currentTheme = localStorage.getItem("theme");
+    const currentTheme = localStorage.getItem("theme");
     if (!_isMounted.current) {
       if (currentTheme === null) {
         const currentDate = new Date();
@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
           setTheme("dark");
           localStorage.setItem("theme", "dark");
         } else {
+          setTheme("light");
           localStorage.setItem("theme", "light");
         }
       } else {
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
     };
   }, []);
 
-  function changeTheme() {
+  const changeTheme = () => {
     let currentTheme = localStorage.getItem("theme");
 
     if (currentTheme === "light") {
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
       localStorage.setItem("theme", "light");
       setTheme("light");
     }
-  }
+  };
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -79,9 +80,6 @@ const Layout = ({ children }) => {
             padding: 0;
             margin: 0;
             font-family: "Nunito";
-          }
-          body {
-            background: rgb(239, 242, 244);
           }
 
           * {
