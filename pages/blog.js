@@ -35,13 +35,12 @@ const Blog = (props) => {
       <div className="blog-component">
         {data !== null &&
           data.items.map((story, index) => {
-            const { title, link, content, thumbnail, categories } = story;
+            const { title, link, content, categories } = story;
 
             return (
               <BlogContent
                 title={title}
                 link={link}
-                thumbnail={thumbnail}
                 content={content}
                 categories={categories}
                 key={index}

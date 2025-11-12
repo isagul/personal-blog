@@ -1,15 +1,18 @@
 import React from "react";
 
-const BlogContent = ({ title, thumbnail, link, content, categories }) => {
+const BlogContent = ({ title, link, content, categories }) => {
   const createdDiv = document.createElement("div");
   createdDiv.innerHTML = content;
 
+  const match = content.match(/<img[^>]*src="(https:\/\/cdn-images[^"]+)"/i);
+  const firstImgSrc = match ? match[1] : null;
+
   return (
     <div className="story-area">
-      {!thumbnail.includes("stat") && (
+      {firstImgSrc && (
         <img
           className="thumbnail"
-          src={`${thumbnail}`}
+          src={`${firstImgSrc}`}
           alt={categories.join(" ")}
           title={title}
         />
