@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import BlogContent from "../components/BlogContent";
 import BeatLoader from "react-spinners/BeatLoader";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { useFetch } from "../utils/hooks/useFetch";
 
 const Blog = (props) => {
