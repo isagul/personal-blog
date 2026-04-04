@@ -8,7 +8,6 @@ const Profile = () => {
         <div className="profile-info">
           <p>İsa Gül</p>
           <p>Frontend Developer</p>
-          <p>"I'm gonna start a revolution from my bed"</p>
         </div>
         
       </div>
@@ -73,7 +72,7 @@ const Profile = () => {
           border-radius: 50%;
           height: 120px;
           width: 120px;
-          margin-right: 10px;
+          margin-right: 8px;
           object-fit: cover;
         }
         .profile .profile-info {
@@ -83,11 +82,13 @@ const Profile = () => {
           border-left-color: #cf5050;
           border-left-width: 1px;
           border-left-style: solid;
-          padding-left: 10px;
+          padding: 8px 0 8px 8px;
+          gap: 4px
         }
         .profile .profile-info p {
           letter-spacing: 2px;
           line-height: 15px;
+          margin: 0;
         }
         .profile .profile-info p:last-child {
           float: right;
@@ -100,9 +101,9 @@ const Profile = () => {
         }
         .icons a {
           // background: rgba(38, 38, 38, 0.7);
-          padding: 10px;
+          padding: 8px;
           border-radius: 5px;
-          margin-right: 10px;
+          margin-right: 8px;
         }
         .icons a:last-child {
           margin-right: 0;
@@ -126,6 +127,7 @@ const Profile = () => {
             margin-left: 0;
             flex-direction: column;
             align-items: center;
+            gap: 8px;
           }
           .profile img {
             margin-right: 0;
@@ -135,6 +137,7 @@ const Profile = () => {
           .profile .profile-info {
             padding-left: 0;
             text-align:center;
+            padding-bottom: 8px;
           }
           .icons i {
             font-size: 24px;
